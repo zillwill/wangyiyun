@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        >
+
+        <ImageView
+
+            android:id="@+id/imageView7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <example.musicdemo2.widget.RollTextView
+            android:id="@+id/tv_mvname"
+            android:layout_width="285dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/tv_mvsize"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imageView7"
+            android:layout_toLeftOf="@+id/imageView8"
+            android:layout_toRightOf="@+id/imageView7"
+            android:ellipsize="marquee"
+            android:focusable="false"
+            android:scrollbars="vertical"
+            android:descendantFocusability="blocksDescendants"
+            android:singleLine="true"
+            android:focusableInTouchMode="false"
+            android:marqueeRepeatLimit="marquee_forever"
+
+            android:gravity="center|left"
+            android:textColor="@android:color/black"
+            android:text="MV名" />
+
+        <TextView
+            android:id="@+id/tv_mvsize"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/imageView7"
+            android:layout_toEndOf="@+id/imageView7"
+            android:layout_toRightOf="@+id/imageView7"
+            android:gravity="center|left"
+            android:text="MV大小"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:src="@drawable/music_icn_more"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dcdcdc"></View>
+    </RelativeLayout>
+
+</LinearLayout>

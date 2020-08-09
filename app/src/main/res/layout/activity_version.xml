@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".drawer.VersionActivity">
+    <RelativeLayout
+        android:id="@+id/rl_version_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/iv_version_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/black_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            />
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本信息"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_version_back"
+            android:layout_marginLeft="20dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_version_top"
+        android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/mgray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_marginTop="40dp"
+        android:id="@+id/ig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/music_icon"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前版本 v7.1.1.0"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="40dp"/>
+    </LinearLayout>
+        <Button
+        android:id="@+id/btn_newversion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:background="#00000000"
+        android:text="版本更新"
+        android:textSize="15sp"
+        android:gravity="center_vertical" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mgray"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="#00000000"
+            android:text="评个分吧"
+            android:textSize="15sp"
+            android:gravity="center_vertical" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/l1"
+        android:background="@color/mgray"
+        />
+</RelativeLayout>

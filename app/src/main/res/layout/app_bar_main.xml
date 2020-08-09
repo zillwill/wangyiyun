@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+    <!--第一块红色标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/toolabar_color"
+        android:gravity="center"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/actionbar_menu"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignTop="@+id/iv_search"
+            android:layout_marginEnd="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_toLeftOf="@+id/iv_music"
+            android:layout_toStartOf="@+id/iv_music"
+            android:background="@drawable/actionbar_online"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/iv_music"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/iv_more"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/actionbar_music"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/iv_mv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/iv_music"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_toEndOf="@+id/iv_music"
+            android:layout_toRightOf="@+id/iv_music"
+            android:background="@drawable/actionbar_mv"
+            android:clickable="true" />
+
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/actionbar_search"
+            android:scaleType="center" />
+    </RelativeLayout>
+
+    <!--第二块（动态添加碎片）-->
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <!--底部-->
+    <include layout="@layout/common_playing_bottom" />
+
+</LinearLayout>

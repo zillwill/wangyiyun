@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="example.musicdemo2">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 摄像头权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 自动聚焦权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" /> <!-- 读取SD卡权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/music_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".More.NewmusicActivity"></activity>
+        <activity android:name=".More.DailyRcdActivity" />
+        <activity
+            android:name=".AddActivity"
+            android:label="新建歌单"
+            android:theme="@style/Dialog" />
+        <activity android:name=".MyMusicList.MyListActivity" />
+        <activity android:name=".drawer.BlankActivity" />
+        <activity android:name=".drawer.Help2Activity" />
+        <activity android:name=".drawer.Help1Activity" />
+        <activity android:name=".drawer.VersionActivity" />
+        <activity android:name=".drawer.HelpActivity" />
+        <activity android:name=".drawer.S1SActivity" />
+        <activity
+            android:name=".drawer.IsExitActivity"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".drawer.ChangePswActivity"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".drawer.ChangeAccountActivity"
+            android:theme="@style/Dialog" />
+        <activity android:name=".drawer.AccountManageActivity" />
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity" />
+
+        <service
+            android:name=".service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity" />
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".MusicListActivity" />
+        <activity android:name=".MusicPlayActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".MvPlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".zxing.activity.CaptureActivity" />
+    </application>
+
+</manifest>

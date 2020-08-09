@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:max="100"
+        android:progress="0"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/placeholder_disk_210" />
+
+        <LinearLayout
+            android:id="@+id/ly_paly_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/tv_musicName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="这里是歌曲名称"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_musicAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="歌手"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playbar_btn_playlist" />
+
+        <ImageView
+            android:id="@+id/iv_playOrPause"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playbar_btn_play" />
+
+        <ImageView
+            android:id="@+id/iv_playNext"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/playbar_btn_next" />
+    </LinearLayout>
+
+</LinearLayout>
